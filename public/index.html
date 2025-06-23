@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat entre amis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login">
+    <input type="text" id="username" placeholder="Ton nom">
+    <button onclick="register()">Entrer</button>
+  </div>
+
+  <div class="chat-app hidden">
+    <div class="sidebar">
+      <h2>Contacts</h2>
+      <ul id="userList"></ul>
+      <input type="text" id="newContact" placeholder="Ajouter contact">
+      <button onclick="addContact()">Ajouter</button>
+    </div>
+    <div class="chat-box">
+      <h2 id="currentChat">Choisis un contact</h2>
+      <div class="messages" id="messages"></div>
+      <div class="input-area">
+        <input type="text" id="messageInput" placeholder="Ton message">
+        <button onclick="sendMessage()">Envoyer</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
